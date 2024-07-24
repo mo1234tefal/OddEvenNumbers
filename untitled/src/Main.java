@@ -3,8 +3,10 @@ public class Main {
     public static void main(String[] args) {
         int[] arr = {1 , 2 , 3 , 4 , 5};
         print_numbers(arr);
-        System.out.println("is even: " + isEven(15));
-        System.out.println("is odd: " + isOdd(15));
+        System.out.println("even numbers : " );
+        printEven(arr);
+        System.out.println("odd numbers : " );
+        printOdd(arr);
 
 
 
@@ -15,22 +17,20 @@ public class Main {
         for(int i :arr)
             System.out.println(i);
     }
-    static boolean isEven(int number)
+    static void printEven(int arr[])
     {
-        boolean even = false;
-        if(number % 2 == 0)
+        for(int i : arr)
         {
-            even = true;
+            if(i % 2 == 0)
+                System.out.println(i);
         }
-        return even;
     }
-    static boolean isOdd(int number)
+    static void printOdd(int arr[])
     {
-        boolean Odd = false;
-        if(number % 2 != 0)
+        for(int i : arr)
         {
-            Odd = true;
+            if(i % 2 != 0)
+                System.out.println(i);
         }
-        return Odd;
     }
 }
